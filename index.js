@@ -39,7 +39,7 @@ if (cluster.isPrimary) {
   });
 
   app.get('/', (req, res) => {
-    res.sendFile('C:/Users/l2253/OneDrive - AEBJC/Ambiente de Trabalho/M6/JS/chat-socket.io/index.html');
+    res.sendFile(new URL('./index.html', import.meta.url).pathname);
   });
 
   io.on('connection', async (socket) => {
